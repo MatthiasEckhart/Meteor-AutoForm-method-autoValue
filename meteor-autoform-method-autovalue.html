@@ -1,0 +1,16 @@
+<head>
+    <title>meteor-autoform-method-autovalue</title>
+</head>
+
+<body>
+<h1>Welcome to Meteor!</h1>
+{{>loginButtons}}
+{{> adminIndex}}
+</body>
+
+<template name="adminIndex">
+    <h1>Available Courses</h1>
+    <button type="button" class="btn btn-success btn-block">Create New Course</button>
+    <h3>Create New Course</h3>
+    {{>quickForm id="InsertCourseForm" collection="Courses" type="method" meteormethod="addCourse"}}
+</template>
